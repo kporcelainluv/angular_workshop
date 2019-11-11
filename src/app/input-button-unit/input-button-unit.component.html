@@ -1,6 +1,8 @@
 <p>input-button-unit works!</p>
 The title is: {{ title }}
 <div>
-  <input id="my-input" />
-  <button>Save</button>
+  <input [value]="title" (keyup.enter)="changeTitle($event.target.value)" />
+  <button>
+    {{ buttonStats }}
+  </button>
 </div>
