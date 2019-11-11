@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-input-button-unit',
-  templateUrl: './input-button-unit.component.html',
-  styleUrls: ['./input-button-unit.component.css']
+  selector: "app-input-button-unit",
+  templateUrl: "./input-button-unit.component.html",
+  styleUrls: ["./input-button-unit.component.css"]
 })
 export class InputButtonUnitComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+  title = "Hello World";
+  constructor() {
+    this.changeTitle("My First Angular App");
   }
 
+  ngOnInit() {}
+  changeTitle(newTitle: string) {
+    this.title = newTitle;
+  }
 }
